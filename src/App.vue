@@ -19,6 +19,7 @@ export default {
 @import '~vux/src/styles/reset.less';
 
 body {
-  background-color: #efefef;
+  /*background-color: #efefef;*/
 }
+input{outline:medium;}
 </style>
