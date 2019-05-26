@@ -1,16 +1,19 @@
 <template>
-    <div class="contents">
-        <div class="contents-list">
+    <div class=" container">
+        <div class="contents-list" style="margin-top: 5rem">
             <input type="text" placeholder="Username or Email">
         </div>
         <div class="contents-list">
             <input type="password" placeholder="Password">
         </div>
-        <div class="contents-list">
-            <input type="button" id="login-btn" value="LOG IN">
+        <div class="contents-list" style="margin-top: 6rem">
+            <input class="login-btn" type="button" id="login-btn" value="LOG IN">
         </div>
         <div class="contents-list">
             <divider>or</divider>
+        </div>
+        <div class="contents-list">
+            <input class="login-btn google-share" type="button" id="share-btn" value="LOGIN WITH GOOGLE">
         </div>
     </div>
 </template>
@@ -34,60 +37,23 @@ export default {
 }
 </script>
 <style lang="stylus">
-    /*.contents*/
-        /*margin-top 2rem*/
-        /*.contents-list*/
-            /*line-height 4rem*/
-            /*margin-left 5%*/
-            /*input*/
-                /*position relative*/
-                /*border 0*/
-                /*border-bottom 1px solid #d5dde6*/
-                /*width 90%*/
-
-                /*font-size 1rem*/
-                /*padding-left .5rem*/
-                /*padding-bottom .5rem*/
-                /*padding-top .5rem*/
-                /*padding .5rem*/
-
-    .contents
-        margin-top 2rem
-        .contents-list
-            line-height 4rem
-            margin-left 5%
-            input
-                position relative
-                border 0
-                border-bottom 1px solid #d5dde6
-                width 90%
-    #login-btn
+    .contents-list
+        margin-top 3rem
+        line-height 3rem
+        input
+            position relative
+            border 0
+            border-bottom 1px solid #d5dde6
+            width 100%
+    .login-btn
         background #47525e
         padding-left .25rem
         padding-top 0
-        width calc(90% + .5rem)
-        height 3rem
-        line-height 3rem
+        width 100%
+        height 4rem
+        line-height 4rem
         color #fff
         border-radius .2rem
-        margin-top 2rem
-
-    .line-left
-        position absolute
-        display:inline-block;
-        width 100px
-
-        border-top:1px solid #eee;
-        vertical-align:5px;
-    .line-right
-        display:inline-block;
-        width 100px
-        float right
-        border-top:1px solid #eee;
-        vertical-align:5px;
-    .tips
-        width 20%
-        position absolute
-        color #56606b
-        font-size .7rem
+    .google-share
+        background #c0ccda
 </style>
