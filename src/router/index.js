@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import store from '@/pages/store/store'
 import * as types from '@/pages/store/types'
 import Login from '@/pages/login/index'
-
+import UCenter from '@/pages/ucenter/index'
 
 
 Vue.use(Router)
@@ -21,12 +21,21 @@ export default new Router({
             },
         },
         {
-            path: '/order/:id',
-            name: 'Order',
+            path: '/login',
+            name: 'login',
             component: Login,
             meta: {
                 keepAlive: false, // 需要被缓存
-                title: '确认订单'
+                title: '登陆'
+            },
+        },
+        {
+            path: '/ucenter',
+            name: 'ucenter',
+            component: UCenter,
+            meta: {
+                keepAlive: false, // 需要被缓存
+                title: '个人中心'
             },
         }
     ]
