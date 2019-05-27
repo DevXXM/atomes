@@ -74,7 +74,7 @@
         }
     }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
     .contents-list
         margin-top 3rem
         line-height 3rem

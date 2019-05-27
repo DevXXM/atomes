@@ -1,21 +1,20 @@
 <template>
     <div>
-        <div class="headers">
-            User Center
-        </div>
-        <div>
-            welcome {{username}}
-        </div>
+        <ucenter-head></ucenter-head>
+        <ucenter-content></ucenter-content>
     </div>
 </template>
 <script>
 import axios from 'axios'
 import store from "../store/store";
-import LoginContent from './components/content'
+import UcenterContent from './components/content'
+import UcenterHead from './components/head'
+
 export default {
     name: 'bind',
     components: {
-        LoginContent
+        UcenterContent,
+        UcenterHead
     },
     data: function () {
         return {
@@ -39,7 +38,7 @@ export default {
     }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
     .headers
         height 4rem
         background #c0ccda

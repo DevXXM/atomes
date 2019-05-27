@@ -1,19 +1,33 @@
 <template>
-    <div class=" container">
-        <div class="contents-list" style="margin-top: 5rem">
-            <input type="text" placeholder="Username or Email">
+    <div class="col-xs-12">
+        <div class="contents-list" >
+            <div class="username">
+                <b>Brendan Moore</b>
+            </div>
+            <div class="office">
+                CTO at Marvel Prototyping
+            </div>
+            <div class="office">
+                Currently in London , UK
+            </div>
+            <div class="icon-box">
+                <span class="iconfont icon-facebook"></span>
+                <span class="iconfont icon-twitter"></span>
+                <span class="iconfont icon-google"></span>
+            </div>
         </div>
-        <div class="contents-list">
-            <input type="password" placeholder="Password">
-        </div>
-        <div class="contents-list" style="margin-top: 6rem">
-            <input class="login-btn" type="button" id="login-btn" value="LOG IN">
-        </div>
-        <div class="contents-list">
-            <divider>or</divider>
-        </div>
-        <div class="contents-list">
-            <input class="login-btn google-share" type="button" id="share-btn" value="LOGIN WITH GOOGLE">
+        <div class="project-list">
+            <div class="project-item">
+                <div class="project-cover">
+                    <img src="http://api.atomes.wordo.cn/img/cover.jpg" alt="">
+                </div>
+                <div class="project-title">
+                    Project1
+                </div>
+                <div class="project-desc">
+                    Subtitle
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -36,24 +50,42 @@ export default {
     }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
     .contents-list
-        margin-top 3rem
-        line-height 3rem
-        input
-            position relative
-            border 0
-            border-bottom 1px solid #d5dde6
-            width 100%
-    .login-btn
-        background #47525e
-        padding-left .25rem
-        padding-top 0
+        text-align center
+        margin-top -10rem
+    .username
+        font-family "微软雅黑"
+        font-size 1.6rem
+        color #3d4855
+    .office
+        color #929eb0
+        font-size .8rem
+    .icon-box span
+        font-size 2rem
+        padding-left .2rem
+        padding-right .2rem
+    .project-list
         width 100%
+    .project-item
+        height 6rem
+        background #eff2f7
+    .project-cover
+        width 4rem
         height 4rem
-        line-height 4rem
-        color #fff
-        border-radius .2rem
-    .google-share
-        background #c0ccda
+        position absolute
+    .project-cover img
+        width 100%
+        height 100%
+        margin 1rem
+        border-radius 50%
+
+    .project-title
+        margin-left 6rem
+        padding-top 1rem
+        color #3b4653
+    .project-desc
+        margin-left 6rem
+        color #929eb0
+        font-size .8rem
 </style>

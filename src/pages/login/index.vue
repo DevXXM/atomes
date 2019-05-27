@@ -26,7 +26,7 @@ export default {
     }
 }
 </script>
-<style lang="stylus">
+<style lang="stylus" scoped>
     .headers
         height 4rem
         background #c0ccda
