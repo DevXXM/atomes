@@ -34,7 +34,7 @@ export default new Router({
             name: 'ucenter',
             component: UCenter,
             meta: {
-                keepAlive: false, // 需要被缓存
+                keepAlive: true, // 需要被缓存
                 title: '个人中心'
             },
         }
