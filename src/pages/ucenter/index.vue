@@ -1,7 +1,7 @@
 <template>
     <div>
-        <ucenter-head></ucenter-head>
-        <ucenter-content></ucenter-content>
+        <ucenter-head :userData="userData"></ucenter-head>
+        <ucenter-content :userData="userData"></ucenter-content>
     </div>
 </template>
 <script>
@@ -19,22 +19,26 @@ export default {
     data: function () {
         return {
             book_info:{},
-            username:""
+            userData:{}
         }
     },
     methods:{
+        loadUser() {
+            var url = `/user/userinfo`
+            axios.get(url)
+                .then(this.loadUserRes)
+        },
+        loadUserRes(res) {
+            if (res.data.code == 0) {
+                this.userData = res.data.data
+                console.log(this.userData);
+            } else {
+
+            }
+        }
     },
     mounted() {
-        var url = `/user/userinfo?username=${this.username}&password=${this.password}`
-        this.load = true
-        var _self = this
-        axios.get(url)
-            .then(function (res) {
-                console.log(1);
-                console.log(res.data.data.username);
-                _self.username = res.data.data.username
-                // this.username = res.data.data.username
-            })
+        this.loadUser()
     }
 }
 </script>

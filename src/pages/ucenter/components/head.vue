@@ -2,7 +2,7 @@
     <div class="contents">
         <div class="col-xs-4"></div>
         <div class="headimg col-xs-4">
-            <img src="http://img.wordo.cn/defaulthead.gif" alt="">
+            <img :src="userData.headimgurl" alt="">
         </div>
     </div>
 </template>
@@ -11,12 +11,14 @@ import axios from 'axios'
 import { Divider } from 'vux'
 export default {
     name: 'contents',
+    props:{
+        userData:{}
+    },
     components: {
         Divider
     },
     data: function () {
         return {
-            book_info:{}
         }
     },
     methods:{

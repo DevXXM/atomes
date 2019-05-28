@@ -2,13 +2,13 @@
     <div class="col-xs-12">
         <div class="contents-list" >
             <div class="username">
-                <b>Brendan Moore</b>
+                <b>{{userData.username}}</b>
             </div>
             <div class="office">
-                CTO at Marvel Prototyping
+                {{userData.office}}
             </div>
             <div class="office">
-                Currently in London , UK
+                {{userData.position}}
             </div>
             <div class="icon-box">
                 <span class="iconfont icon-facebook"></span>
@@ -36,15 +36,18 @@ import axios from 'axios'
 import { Divider } from 'vux'
 export default {
     name: 'contents',
+    props:{
+        userData:{}
+    },
     components: {
         Divider
     },
     data: function () {
         return {
-            book_info:{}
         }
     },
     methods:{
+
     },
     mounted() {
     }
