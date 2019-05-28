@@ -2,7 +2,7 @@
     <div class="col-xs-12">
         <div class="contents-list" >
             <div class="username">
-                <b>{{userData.username}}</b>
+                <b>{{userData.nickname}}</b>
             </div>
             <div class="office">
                 {{userData.office}}

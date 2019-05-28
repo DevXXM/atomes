@@ -4,7 +4,7 @@ import store from '@/pages/store/store'
 import * as types from '@/pages/store/types'
 import Login from '@/pages/login/index'
 import UCenter from '@/pages/ucenter/index'
-
+import Profile from '@/pages/profile/index'
 
 Vue.use(Router)
 
@@ -37,6 +37,15 @@ export default new Router({
                 keepAlive: true, // 需要被缓存
                 title: '个人中心'
             },
+        },
+        {
+            path: '/profile',
+            name: 'profile',
+            component: Profile,
+            meta: {
+                keepAlive: true, // 需要被缓存
+                title: '修改资料'
+            }
         }
     ]
 })
