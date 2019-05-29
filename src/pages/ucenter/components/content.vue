@@ -2,13 +2,13 @@
     <div class="col-xs-12">
         <div class="contents-list" >
             <div class="username">
-                <b>{{userData.nickname}}</b>
+                <b>{{userData.name}}</b>
             </div>
             <div class="office">
-                {{userData.office}}
+                {{userData.description}}
             </div>
             <div class="office">
-                {{userData.position}}
+                {{userData.linkedin}}
             </div>
             <div class="icon-box">
                 <span class="iconfont icon-facebook"></span>

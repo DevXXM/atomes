@@ -3,7 +3,7 @@
         <div class="headers">
             Edit Profile
         </div>
-        <profile-content></profile-content>
+        <profile-content :userData="userData"></profile-content>
     </div>
 </template>
 <script>
@@ -17,12 +17,14 @@ export default {
     },
     data: function () {
         return {
-            book_info:{}
+            userData:{}
         }
     },
     methods:{
+
     },
     mounted() {
+
     }
 }
 </script>
