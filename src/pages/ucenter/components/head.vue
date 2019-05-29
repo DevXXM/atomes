@@ -1,8 +1,8 @@
 <template>
     <div class="contents">
         <div class="col-xs-4"></div>
-        <div class="headimg col-xs-4">
-            <img :src="userData.headimgurl" alt="">
+        <div class="headimg col-xs-4" @click="updateProfile">
+            <img :src="userData.headimgurl" alt="" >
         </div>
     </div>
 </template>
@@ -22,6 +22,9 @@ export default {
         }
     },
     methods:{
+        updateProfile(){
+            this.$router.push({ path:'/profile'})
+        }
     },
     mounted() {
     }
