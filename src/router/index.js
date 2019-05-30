@@ -5,7 +5,7 @@ import * as types from '@/pages/store/types'
 import Login from '@/pages/login/index'
 import UCenter from '@/pages/ucenter/index'
 import Profile from '@/pages/profile/index'
-
+import Index from '@/pages/index/index'
 Vue.use(Router)
 
 export default new Router({
@@ -42,6 +42,15 @@ export default new Router({
             path: '/profile',
             name: 'profile',
             component: Profile,
+            meta: {
+                keepAlive: true, // 需要被缓存
+                title: '修改资料'
+            }
+        },
+        {
+            path: '/index',
+            name: 'index',
+            component: Index,
             meta: {
                 keepAlive: true, // 需要被缓存
                 title: '修改资料'
