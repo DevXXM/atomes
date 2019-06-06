@@ -30,7 +30,7 @@
                 </div>
             </popup>
         </div>
-        <ucenter-content :userData="userData"></ucenter-content>
+        <ucenter-content :userData="userData" :list="list" ></ucenter-content>
     </div>
 </template>
 <script>
@@ -50,7 +50,9 @@ export default {
         return {
             book_info:{},
             userData:{},
-            show_left:false
+            show_left:false,
+            list:"",
+            url:""
         }
     },
     methods:{
@@ -67,12 +69,27 @@ export default {
 
             }
         },
+        getList(){
+            this.url = '/event/list?label_id=' + this.$route.params.id + "&"
+            axios.get(this.url)
+                .then(this.getListSucc)
+        },
+        getListSucc(res){
+            res = res.data
+            if (res.code == 0){
+                //成功的话
+                this.list = res.data.data
+            }
+            console.log(res.data.data);
+
+        },
         show_left_box(){
             this.show_left = true
         }
     },
     mounted() {
         this.loadUser()
+        this.getList()
     }
 }
 </script>

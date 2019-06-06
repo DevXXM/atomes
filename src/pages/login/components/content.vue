@@ -63,7 +63,7 @@
                     store.commit(types.LOGIN, res.data.data.token)
                     this.tips = true
                     setTimeout(() => {
-                        this.$router.push({path: '/ucenter'});
+                        this.$router.push({path: '/index'});
                     }, 2000)
                 } else {
                     this.tipe = true
