@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import store from '@/pages/store/store'
 import * as types from '@/pages/store/types'
 import Login from '@/pages/login/index'
+import Reg from '@/pages/reg/index'
 import UCenter from '@/pages/ucenter/index'
 import Profile from '@/pages/profile/index'
 import Index from '@/pages/index/index'
@@ -14,10 +15,10 @@ export default new Router({
         {
             path: '/',
             name: 'login',
-            component: Login,
+            component: Index,
             meta: {
                 keepAlive: false, // 需要被缓存
-                title: '登陆'
+                title: 'events'
             },
         },
         {
@@ -26,7 +27,16 @@ export default new Router({
             component: Login,
             meta: {
                 keepAlive: false, // 需要被缓存
-                title: '登陆'
+                title: 'login'
+            },
+        },
+        {
+            path: '/reg',
+            name: 'reg',
+            component: Reg,
+            meta: {
+                keepAlive: false, // 需要被缓存
+                title: 'reg'
             },
         },
         {
@@ -35,7 +45,7 @@ export default new Router({
             component: UCenter,
             meta: {
                 keepAlive: false, // 需要被缓存
-                title: '个人中心'
+                title: 'user center'
             },
         },
         {
@@ -53,7 +63,7 @@ export default new Router({
             component: Index,
             meta: {
                 keepAlive: true, // 需要被缓存
-                title: '修改资料'
+                title: 'events'
             }
         }
     ]
