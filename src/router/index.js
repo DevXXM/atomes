@@ -7,6 +7,7 @@ import Reg from '@/pages/reg/index'
 import UCenter from '@/pages/ucenter/index'
 import Profile from '@/pages/profile/index'
 import Index from '@/pages/index/index'
+import Info from '@/pages/info/index'
 Vue.use(Router)
 
 export default new Router({
@@ -28,6 +29,15 @@ export default new Router({
             meta: {
                 keepAlive: false, // 需要被缓存
                 title: 'login'
+            },
+        },
+        {
+            path: '/info/:id',
+            name: 'info',
+            component: Info,
+            meta: {
+                keepAlive: false, // 需要被缓存
+                title: 'info'
             },
         },
         {
