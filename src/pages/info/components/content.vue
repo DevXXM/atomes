@@ -1,8 +1,8 @@
 <template>
     <div>
-        <div class="contents-img" >
-            <img :src="eventObj.photo" alt="">
-        </div>
+        <!--<div class="contents-img" >-->
+            <!--<img :src="eventObj.photo" alt="">-->
+        <!--</div>-->
         <div class=" container">
             <div class="contents-list" style="margin-top: 4rem">
                 <div class="contents-title">
