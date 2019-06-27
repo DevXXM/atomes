@@ -10,6 +10,9 @@
             <input class="login-btn" type="button" id="login-btn" @click="login()" value="LOG IN">
         </div>
         <div class="contents-list">
+            <input class="login-btn google-share" type="button" @click="register()"  value="SIGN UP">
+        </div>
+        <div class="contents-list">
             <divider>or</divider>
         </div>
         <div class="contents-list">
@@ -68,6 +71,9 @@
                 } else {
                     this.tipe = true
                 }
+            },
+            register(){
+                this.$router.push({path: '/reg'});
             }
         },
         mounted() {
