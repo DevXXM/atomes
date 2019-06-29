@@ -1,7 +1,7 @@
 <template>
     <div class="col-xs-12" ref="wrapper">
         <div class="content">
-                <div class="project-list" v-for="(val,key) of list" :key="key" :to="'/book/'+val.id" @click="to_url(val.id)">
+                <div class="project-list" v-for="(val,key) of list" :key="key" :to="'/info/'+val.id" @click="to_url(val.id)" >
                     <div class="project-item">
                         <div class="project-cover">
                             <img :src="val.cover" alt="" >
@@ -101,16 +101,20 @@ export default {
 
         },
         to_url(id){
+            console.log(id);
             // store.state.list_scroll = event.currentTarget.offsetTop;
             // console.log(store.state.list_scroll);
             // console.log(id);
-            // this.$router.push({path: '/event/' + id})
+            this.$router.push({path: '/info/' + id})
         },
         handleScroll: function () {
             if (this.getScrollBottomHeight() <= 0 && this.nowPage < this.page && this.loadbook == false) {
                 this.loadbook = true
                 this.loadMoreList()
             }
+        },
+        toUrl(){
+            console.log(1);
         }
     },
     mounted(){
