@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="box-left-items col-xs-offset-1 col-xs-11">
-                        <div class="box-left-item" @click="toMyEvents()">
+                        <div class="box-left-item">
                             My Projects
                         </div>
                         <div class="box-left-item">
@@ -70,7 +70,7 @@ export default {
             }
         },
         getList(){
-            this.url = '/event/list?label_id=' + this.$route.params.id + "&"
+            this.url = '/event/my_event?label_id=' + this.$route.params.id + "&"
             axios.get(this.url)
                 .then(this.getListSucc)
         },
@@ -85,9 +85,6 @@ export default {
         },
         show_left_box(){
             this.show_left = true
-        },
-        toMyEvents(){
-            this.$router.push({path: '/my_event'});
         }
     },
     mounted() {

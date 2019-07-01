@@ -8,6 +8,8 @@ import UCenter from '@/pages/ucenter/index'
 import Profile from '@/pages/profile/index'
 import Index from '@/pages/index/index'
 import Info from '@/pages/info/index'
+import MyEvent from '@/pages/my_event/index'
+
 Vue.use(Router)
 
 export default new Router({
@@ -73,6 +75,15 @@ export default new Router({
             component: Index,
             meta: {
                 keepAlive: true, // 需要被缓存
+                title: 'events'
+            }
+        },
+        {
+            path: '/my_event',
+            name: 'my_event',
+            component: MyEvent,
+            meta: {
+                keepAlive: false, // 需要被缓存
                 title: 'events'
             }
         }
