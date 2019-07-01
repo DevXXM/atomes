@@ -9,6 +9,7 @@ import Profile from '@/pages/profile/index'
 import Index from '@/pages/index/index'
 import Info from '@/pages/info/index'
 import MyEvent from '@/pages/my_event/index'
+import MyProject from '@/pages/my_project/index'
 
 Vue.use(Router)
 
@@ -85,6 +86,15 @@ export default new Router({
             meta: {
                 keepAlive: false, // 需要被缓存
                 title: 'events'
+            }
+        },
+        {
+            path: '/my_project',
+            name: 'my_project',
+            component: MyProject,
+            meta: {
+                keepAlive: false, // 需要被缓存
+                title: 'project'
             }
         }
     ]

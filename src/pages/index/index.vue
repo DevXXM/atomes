@@ -17,7 +17,7 @@
                         </div>
                     </div>
                     <div class="box-left-items col-xs-offset-1 col-xs-11">
-                        <div class="box-left-item" @click="toMyEvents()">
+                        <div class="box-left-item" @click="toMyProject()">
                             My Projects
                         </div>
                         <div class="box-left-item">
@@ -88,6 +88,9 @@ export default {
         },
         toMyEvents(){
             this.$router.push({path: '/my_event'});
+        },
+        toMyProject(){
+            this.$router.push({path: '/my_project'});
         }
     },
     mounted() {

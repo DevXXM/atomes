@@ -96,7 +96,7 @@ export default {
         },
         loadMoreList(){
             this.loadbook = true
-            axios.get('/event/list?page=' + this.page)
+            axios.get('/event/my_project?page=' + this.page)
                 .then(this.getListSucc)
 
         },
